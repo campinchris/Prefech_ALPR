@@ -2,11 +2,11 @@ local plateTable = {}
 
 RegisterCommand("addplate", function(source, args, rawCommand)
 	if IsPlayerAceAllowed(source, Config.AdminPerm) or Config.NoPerms == true then	
-		local plate = rawCommand:upper():gsub("addplate ","")
+		local plate = table.concat(args, " "):upper()
 		if has_value(plateTable, plate) then
 			TriggerClientEvent('chat:addMessage', source, { args = {"^5["..Config.ChatPrefix.."]", "^1This plate is already being tracked!"} })	
 		else
-			TriggerClientEvent('chat:addMessage', source, { args = {"^5["..Config.ChatPrefix.."]", "Plate: ^1^*"..rawCommand:gsub("addplate ","").."^r^0 added to the tracker."} })	
+			TriggerClientEvent('chat:addMessage', source, { args = {"^5["..Config.ChatPrefix.."]", "Plate: ^1^*"..plate.."^r^0 added to the tracker."} })	
 			table.insert(plateTable, plate)
 			if Config.JD_logs then
 				exports.JD_logs:discord(GetPlayerName(source).." added "..plate.." to the tracking list.", source, 0, Config.LogsColor, Config.LogsChannelCommands)
@@ -20,9 +20,9 @@ end)
 
 RegisterCommand("delplate", function(source, args, rawCommand)
 	if IsPlayerAceAllowed(source, Config.AdminPerm) or Config.NoPerms == true then	
-		local plate = rawCommand:upper():gsub("delplate ","")
+		local plate = table.concat(args, " "):upper()
 		if has_value(plateTable, plate) then
-			TriggerClientEvent('chat:addMessage', source, { args = {"^5["..Config.ChatPrefix.."]", "Plate: ^1^*"..rawCommand:gsub("delplate ","").."^r^0 removed from the tracker."} })	
+			TriggerClientEvent('chat:addMessage', source, { args = {"^5["..Config.ChatPrefix.."]", "Plate: ^1^*"..plate.."^r^0 removed from the tracker."} })	
 			removebyKey(plateTable, plate)
 			if Config.JD_logs then
 				exports.JD_logs:discord(GetPlayerName(source).." removed "..plate.." from the tracking list.", source, 0, Config.LogsColor, Config.LogsChannelCommands)
