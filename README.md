@@ -1,7 +1,7 @@
 # JD_Perms
 
 <h4 align="center">
-	<img src="https://prefech.com/img/PrefechALPR.png"><br>
+	<img src="https://prefech.com/img/GitHub/PrefechALPR.png"><br>
 	<a href="https://github.com/Prefech/Prefech_ALPR/releases/latest" title=""><img alt="Licence" src="https://img.shields.io/github/release/Prefech/Prefech_ALPR.svg"></a>
 	<a href="LICENSE" title=""><img alt="Licence" src="https://img.shields.io/github/license/Prefech/Prefech_ALPR.svg"></a>
 	<a href="https://discord.gg/m4BvmkG" title=""><img alt="Discord Status" src="https://discordapp.com/api/guilds/721339695199682611/widget.png"></a>
@@ -36,7 +36,7 @@ ensure Prefech_ALPR
 ```
 4. And to make the permissions load on serer restart you need to add this to your `server.cfg`
 
-<img src="https://prefech.com/img/MapCounty.png"><br>
-<img src="https://prefech.com/img/MapCity.png">
+<img src="https://prefech.com/img/GitHub/MapCounty.png"><br>
+<img src="https://prefech.com/img/GitHub/MapCity.png">
 
 ### For more support join my discord: https://discord.gg/m4BvmkG
